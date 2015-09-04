@@ -181,7 +181,7 @@ ACADEMIC_TLDS = frozenset([
 class Swot(object):
     @classmethod
     def is_academic(cls, domain_str):
-        if not domain_str or not isinstance(domain_str, (str, unicode)):
+        if not domain_str or not isinstance(domain_str, str):
             return False
 
         domain_str = domain_str.strip().lower()
@@ -219,4 +219,4 @@ class Swot(object):
 
 
 if __name__ == '__main__':
-    print Swot.is_academic(sys.argv[1])
+    print(Swot.is_academic(sys.argv[1]))
